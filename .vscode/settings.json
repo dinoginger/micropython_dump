@@ -1,0 +1,11 @@
+{
+    "python.linting.enabled": true,
+    "python.jediEnabled": false,
+
+    // Loaded Stubs: 
+    "python.autoComplete.extraPaths": [".micropy/stuffv2"],
+    "python.autoComplete.typeshedPaths":  [".micropy/stuffv2"],
+    "python.analysis.typeshedPaths":  [".micropy/stuffv2"],
+
+    "python.linting.pylintEnabled": true
+}
