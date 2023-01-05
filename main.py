@@ -29,11 +29,18 @@ class Lab1_controller:
     def something(self):
         pass
 
+    def LED_on(self):
+        self._entry_pin.value(1)
+
+    def LED_off(self):
+        self._entry_pin.value(0)
+
 
 Pin(DEFAULT_ENTRY_PIN, Pin.OUT).value(0)
 print("script is running")
 lab_machine = Lab1_controller(DEFAULT_ADC_PIN, DEFAULT_ENTRY_PIN)
 input("Press anything to launch\n")
+
 while True:
     lab_machine.reciever()
 
