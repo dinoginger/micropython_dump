@@ -1,29 +1,38 @@
 from machine import ADC, Pin
 import time
 
+# This is constants.
 DEFAULT_ENTRY_PIN = 13
 DEFAULT_ADC_PIN = 12
 
 
 class Lab1_controller:
+    """
+    The main class for our machine.
 
-    _info_pin = None
-    _entry_pin = None
+    Will include the main controller functions.    
+    """
+    _info_pin = None  # ADC pin (photosensor)
+    _entry_pin = None # LED pin
 
-    def __init__(self, adc, entr): #
-        Pin(adc).value(1)
+    def __init__(self, adc, entr): # constructor
+
+        
+        self._entry_pin = Pin(entr, Pin.OUT)
         self._info_pin = ADC(Pin(adc))
+
+        self._entry_pin.value(1)  # Activating pins
+        self.Pin(entr).value(1) # --  
+    
 
         self._info_pin.atten(ADC.ATTN_11DB) # volt [0.0 - 3.6v]
 
         
-        self._entry_pin = Pin(entr, Pin.OUT)
-        self._entry_pin.value(1)
-
+        
     def reciever(self):
         print((self._info_pin.read()/4095)*100) # values are from 0 to 4095 so we get percentages
         time.sleep(0.1)
-        #test version
+        # TODO: finish it
         
 
     def something(self):
