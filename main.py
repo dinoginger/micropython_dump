@@ -5,7 +5,7 @@ DEFAULT_ENTRY_PIN = 13
 DEFAULT_ADC_PIN = 12
 
 
-class Lab1_machine:
+class Lab1_controller:
 
     _info_pin = None
     _entry_pin = None
@@ -32,7 +32,10 @@ class Lab1_machine:
 
 Pin(DEFAULT_ENTRY_PIN, Pin.OUT).value(0)
 print("script is running")
-lab_machine = Lab1_machine(DEFAULT_ADC_PIN, DEFAULT_ENTRY_PIN)
+lab_machine = Lab1_controller(DEFAULT_ADC_PIN, DEFAULT_ENTRY_PIN)
 input("Press anything to launch\n")
 while True:
     lab_machine.reciever()
+
+# TODO :  proper logging of the results for long lab (separate class ig)
+# TODO : improve main class
