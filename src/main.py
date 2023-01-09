@@ -26,7 +26,7 @@ class Lab1_controller:
         self._info_pin.atten(self._info_pin.ATTN_11DB) # volt [0.0 - 3.6v]
 
         # 
-        self._pwm = PWM(Pin(DEFAULT_ENTRY_PIN), 40_000_000)
+        self._pwm = PWM(Pin(DEFAULT_ENTRY_PIN), 37000)
 
         self._entry_pin.value(1)  # Activating pins
  
