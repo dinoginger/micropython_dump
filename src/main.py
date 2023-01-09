@@ -4,19 +4,20 @@ import time
 # This is constants.
 DEFAULT_ENTRY_PIN = 32
 DEFAULT_ADC_PIN = 12
-FILE_PATH  = "/test.txt"
 
 class Lab1_controller:
+
     """
     The main class for our machine.
 
     Will include the main controller functions.    
     """
+
     _info_pin = None  # ADC pin (photosensor)
     _entry_pin = None # LED pin
     _pwm = None
 
-    def __init__(self, adc, entr): # constructor
+    def __init__(self, adc, entr):  # constructor
 
         
         self._entry_pin = Pin(entr)
@@ -52,7 +53,7 @@ class Lab1_controller:
 
 print("script is running")
 lab_machine = Lab1_controller(DEFAULT_ADC_PIN, DEFAULT_ENTRY_PIN)
-input("Press anything to launch\n")
+input('Press anything to launch\n')
 
 file = open(FILE_PATH, "w")
 lll = []
