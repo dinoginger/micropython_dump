@@ -1,11 +1,12 @@
 {
-    "folders": [
-        {
-            "path": "../.."
-        },
-        {
-            "name": "serial://dev/tty.usbserial-0232D158",
-            "uri": "serial://%2fdev%2ftty.usbserial-0232d158/"
-        }
-    ]
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "serial://dev/tty.usbserial-0232D158",
+			"uri": "serial:///dev/tty.usbserial-0232d158/"
+		}
+	],
+	"settings": {}
 }

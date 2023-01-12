@@ -145,3 +145,7 @@ dmypy.json
 .micropy/
 !micropy.json
 !src/lib
+
+
+### MyBS
+src/vs_bs3.code-workspace
